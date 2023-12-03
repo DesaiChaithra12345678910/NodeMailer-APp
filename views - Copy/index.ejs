@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NodeMailerApp - Email Form</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  
+  <body class="body">
+    <div class="header">
+      <h1 style="color: #ffffff">NodeMailer App</h1>
+    </div>
+    <div class="content">
+      <h2 style="text-decoration: underline;font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">What is NodeMailer?</h2>
+      <p style="font-size: larger;">Nodemailer is a module for Node.js that makes it easy to send emails. It supports Unicode and allows you to use HTML content, attachments, and more.
+        It simplifies the process of sending Emails. It provides a strsightforward way of sending Emails.
+        Not only the plain text, we can also send some rich content with images, documents and other attachments. Certainely! NodeMailer is a powerful tool
+          for sending emails from node.js applications, but like any technology, it has its own pros and limitations.
+          Here are a few pros and cons of using nodemailer App.
+        </p>
+        <p style="font-size: larger;">1.Configuration Complexity:
+          While Nodemailer is flexible, configuring it for specific email providers might require understanding and specifying various parameters correctly. This can be a bit overwhelming for beginners.
+        </p>
+        <p style="font-size: larger ;">2.Dependency Size:
+          Nodemailer, like many powerful packages, comes with a certain amount of code and dependencies. If you're working on a small project where minimizing dependencies is crucial, this might be a consideration.
+        </p>
+        <p style="font-size: larger;">3.Not a Full-Featured Email Server:
+          Nodemailer is primarily designed for sending emails. If your application requires more advanced email server features, such as receiving emails or handling complex workflows, you might need a more specialized solution.
+        </p>
+        <p style="font-size: larger;">4.Rate Limiting:
+          Some email providers may enforce rate limiting to prevent abuse. Nodemailer itself does not provide built-in mechanisms for handling rate limits, so you may need to implement your own strategies if you encounter rate-limiting issues.
+        </p>
+        <h2>In summary, nodemailer is a robust choice of for sending emails from Node.js applications, 
+          especially for straightforward use cases.
+        </h2>
+        <h2 style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;text-decoration: underline;">"straightforward" use cases means ?
+        </h2>
+        <p style="font-size: larger;">"Straightforward use cases" of Nodemailer refer to situations where you need to incorporate email-sending functionality in your Node.js application for common and basic purposes. These might include:
+        </p>
+        <p style="font-size: larger;">1.Sending Transactional Emails:
+          Nodemailer is commonly used to send transactional emails, such as user registration confirmations, password reset notifications, and order confirmations.
+          </p>
+          <p style="font-size: larger;">User Notifications:
+            Notifying users about certain events or activities within your application, like alerts, updates, or reminders.
+          </p>
+          <p style="font-size: larger;">File Attachments:
+            Sending emails with file attachments, which can be useful for sharing documents, images, or other files.
+          </p>
+          
+          <p>I successfully created a Nodemailer app that allows for efficient and easy sending of emails from my Node.js application.</p>
+    </div>
+    <br/>
+    <br/>
+    <center>
+    <div class="container">
+      <h1 class="title">NodeMailerApp</h1>
+      <p class="description" style="color: #ffffff;">
+        Send emails easily using NodeMailerApp. Just fill in the form and click
+        "Send Email" to get started.
+      </p>
+      <form
+        action="/send-email"
+        method="POST"
+        class="index"
+        id="index"
+      >
+        <input
+          type="email"
+          name="email"
+          id="email"
+          placeholder="Enter recipient email"
+          required
+        />
+        <textarea
+          name="message"
+          id="message"
+          rows="5"
+          placeholder="Enter your message"
+          required
+        ></textarea>
+        <button class="submit" id="submit-button">Send Email</button>
+      </form>
+      <% if (typeof status !== 'undefined' && status && typeof message !==
+      'undefined' && message) { %>
+      <div class="status-message <%= status %>"><%= message %></div>
+      <% } %>
+
+      
+      </div>
+      <br/>
+      <br/>
+      <br/>
+    </center>
+    <center>
+    <div class="footer">
+      <h2>For any queries about the nodemailer app</h2>
+      <p>mail me at: 224g1a3212@srit.ac.in</p>
+    </div>
+  </center>
+  </body>
+</html>
